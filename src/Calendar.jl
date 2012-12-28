@@ -180,10 +180,7 @@ parse(pattern, s) = parse(pattern, s, _tz)
 
 function show(io::IO, t::CalendarTime)
 #    s = ICU.format(_get_format(t.tz), t.millis)
-<<<<<<< HEAD
-=======
-    s = format("yyyy-MM-dd", t)
->>>>>>> b5404b2bec77ef1f126c5648dcfbdf55f70130cc
+    s = format("yyyy", t)
     print(io, s)
 end
 
