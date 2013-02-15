@@ -200,7 +200,8 @@ parse{S<:String}(pattern::String, s::AbstractArray{S}) = map(x -> parse(pattern,
 
 
 function show(io::IO, t::CalendarTime)
-    s = ICU.format(_get_format(t.tz), t.millis)
+    #s = ICU.format(_get_format(t.tz), t.millis)
+     s = format("yyyy-MM-dd", t)
     print(io, s)
 end
 
